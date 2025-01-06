@@ -11,16 +11,16 @@ if not exist "%harena_path%\PredefinedResolutions" (
 cls
 echo Choose your resolution:
 echo 1) 1920x1080 16x9
-echo 2) 1280x720 16x9
-echo 3) 1600x900 16x9
+echo 2) 1600x900 16x9
+echo 3) 1280x720 16x9
 echo 4) 1024x768 4x3
 echo 5) 800x600 4x3
 echo.
 set /p choice=Enter your choice (1-5): 
 
 if "%choice%"=="1" goto :1920x1080
-if "%choice%"=="2" goto :1280x720
-if "%choice%"=="3" goto :1600x900
+if "%choice%"=="2" goto :1600x900
+if "%choice%"=="3" goto :1280x720
 if "%choice%"=="4" goto :1024x768
 if "%choice%"=="5" goto :800x600
 
@@ -34,16 +34,16 @@ echo Copying ubi.ini for 1920x1080...
 copy "%harena_path%\PredefinedResolutions\16x9\1920x1080\ubi.ini" "C:\Windows\Ubisoft" /y
 goto :16x9launch
 
-:1280x720
-cls
-echo Copying ubi.ini for 1280x720...
-copy "%harena_path%\PredefinedResolutions\16x9\1280x720\ubi.ini" "C:\Windows\Ubisoft" /y
-goto :16x9launch
-
 :1600x900
 cls
 echo Copying ubi.ini for 1600x900...
 copy "%harena_path%\PredefinedResolutions\16x9\1600x900\ubi.ini" "C:\Windows\Ubisoft" /y
+goto :16x9launch
+
+:1280x720
+cls
+echo Copying ubi.ini for 1280x720...
+copy "%harena_path%\PredefinedResolutions\16x9\1280x720\ubi.ini" "C:\Windows\Ubisoft" /y
 goto :16x9launch
 
 :1024x768
